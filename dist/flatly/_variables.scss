@@ -17,7 +17,7 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$blue:    #2C3E50 !default;
+$blue:    #375a7f !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -54,6 +54,10 @@ $h3-font-size:                2rem !default;
 // Tables
 
 $table-accent-bg:             $gray-200 !default;
+
+// Forms
+
+$input-color:                       $black !default;
 
 // Dropdowns
 
