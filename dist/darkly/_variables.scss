@@ -17,7 +17,7 @@ $gray-800: #303030 !default;
 $gray-900: #222 !default;
 $black:    #000 !default;
 
-$blue:    #375a7f !default;
+$blued:   #375a7f !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
@@ -27,8 +27,10 @@ $yellow:  #F39C12 !default;
 $green:   #00bc8c !default;
 $teal:    #20c997 !default;
 $cyan:    #3498DB !default;
+$blue:    #5e9bda !default;
+$bluel:   #6eb5ff !default;
 
-$primary:       $blue !default;
+$primary:       $blued !default;
 $secondary:     $gray-700 !default;
 $success:       $green !default;
 $info:          $cyan !default;
@@ -44,7 +46,8 @@ $body-color:                $white !default;
 
 // Links
 
-$link-color:                $success !default;
+$link-color:                $blue !default;
+$link-hover-color:          $bluel !default;
 
 // Fonts
 
@@ -96,7 +99,6 @@ $nav-tabs-link-active-border-color: $nav-tabs-border-color !default;
 $navbar-padding-y:                  1rem !default;
 
 $navbar-dark-color:                 $white !default;
-$navbar-dark-hover-color:           $success !default;
 
 $navbar-light-color:                rgba($white,.5) !default;
 $navbar-light-hover-color:          $white !default;
@@ -107,19 +109,19 @@ $navbar-light-toggler-border-color: rgba($white,.1) !default;
 // Pagination
 
 $pagination-color:                  $white !default;
-$pagination-bg:                     $success !default;
+$pagination-bg:                     $primary !default;
 $pagination-border-width:           0 !default;
 $pagination-border-color:           transparent !default;
 
 $pagination-hover-color:            $white !default;
-$pagination-hover-bg:               lighten($success, 10%) !default;
+$pagination-hover-bg:               darken($primary, 10%) !default;
 $pagination-hover-border-color:     transparent !default;
 
 $pagination-active-bg:              $pagination-hover-bg !default;
 $pagination-active-border-color:    transparent !default;
 
 $pagination-disabled-color:         $white !default;
-$pagination-disabled-bg:            darken($success, 15%) !default;
+$pagination-disabled-bg:            darken($primary, 15%) !default;
 $pagination-disabled-border-color:  transparent !default;
 
 // Jumbotron
