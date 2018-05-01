@@ -1,12 +1,12 @@
 /*!
- * Bootswatch v4.1.0
+ * Bootswatch v4.1.1
  * Homepage: https://bootswatch.com
  * Copyright 2012-2018 Thomas Park
  * Licensed under MIT
  * Based on Bootstrap
 */
 /*!
- * Bootstrap v4.1.0 (https://getbootstrap.com/)
+ * Bootstrap v4.1.1 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
@@ -62,7 +62,7 @@ html {
   width: device-width;
 }
 
-article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
 
@@ -72,7 +72,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #868e96;
+  color: #495057;
   text-align: left;
   background-color: #fff;
 }
@@ -199,7 +199,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   font-size: 1em;
 }
 
@@ -513,13 +513,6 @@ mark,
 .figure-caption {
   font-size: 90%;
   color: #868e96;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 code {
@@ -2078,7 +2071,7 @@ select.form-control:focus::-ms-value {
   padding-bottom: 0.375rem;
   margin-bottom: 0;
   line-height: 1.5;
-  color: #868e96;
+  color: #495057;
   background-color: transparent;
   border: solid transparent;
   border-width: 1px 0;
@@ -2246,6 +2239,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   display: block;
 }
 
+.was-validated .form-control-file:valid ~ .valid-feedback,
+.was-validated .form-control-file:valid ~ .valid-tooltip, .form-control-file.is-valid ~ .valid-feedback,
+.form-control-file.is-valid ~ .valid-tooltip {
+  display: block;
+}
+
 .was-validated .form-check-input:valid ~ .form-check-label, .form-check-input.is-valid ~ .form-check-label {
   color: #73A839;
 }
@@ -2343,6 +2342,12 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
 .custom-select:invalid ~ .invalid-tooltip,
 .custom-select.is-invalid ~ .invalid-feedback,
 .custom-select.is-invalid ~ .invalid-tooltip {
+  display: block;
+}
+
+.was-validated .form-control-file:invalid ~ .invalid-feedback,
+.was-validated .form-control-file:invalid ~ .invalid-tooltip, .form-control-file.is-invalid ~ .invalid-feedback,
+.form-control-file.is-invalid ~ .invalid-tooltip {
   display: block;
 }
 
@@ -3243,7 +3248,7 @@ input[type="button"].btn-block {
   padding: 0.5rem 0;
   margin: 0.125rem 0 0;
   font-size: 1rem;
-  color: #868e96;
+  color: #495057;
   text-align: left;
   list-style: none;
   background-color: #fff;
@@ -3369,7 +3374,7 @@ input[type="button"].btn-block {
   padding: 0.25rem 1.5rem;
   clear: both;
   font-weight: 400;
-  color: #868e96;
+  color: #495057;
   text-align: inherit;
   white-space: nowrap;
   background-color: transparent;
@@ -3409,7 +3414,7 @@ input[type="button"].btn-block {
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1.5rem;
-  color: #868e96;
+  color: #495057;
 }
 
 .btn-group,
@@ -3629,8 +3634,7 @@ input[type="button"].btn-block {
   border-bottom-right-radius: 0;
 }
 
-.input-group > .custom-file:not(:first-child) .custom-file-label,
-.input-group > .custom-file:not(:first-child) .custom-file-label::after {
+.input-group > .custom-file:not(:first-child) .custom-file-label {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -3756,13 +3760,14 @@ input[type="button"].btn-block {
 }
 
 .custom-control-label {
+  position: relative;
   margin-bottom: 0;
 }
 
 .custom-control-label::before {
   position: absolute;
   top: 0.25rem;
-  left: 0;
+  left: -1.5rem;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -3778,7 +3783,7 @@ input[type="button"].btn-block {
 .custom-control-label::after {
   position: absolute;
   top: 0.25rem;
-  left: 0;
+  left: -1.5rem;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -3943,7 +3948,7 @@ input[type="button"].btn-block {
   bottom: 0;
   z-index: 3;
   display: block;
-  height: calc(calc(2.25rem + 2px) - 1px * 2);
+  height: 2.25rem;
   padding: 0.375rem 0.75rem;
   line-height: 1.5;
   color: #495057;
@@ -5407,7 +5412,7 @@ input[type="button"].btn-block {
 }
 
 .list-group-item-action:active {
-  color: #868e96;
+  color: #495057;
   background-color: #e9ecef;
 }
 
@@ -6077,7 +6082,7 @@ button.close {
 
 .popover-body {
   padding: 0.5rem 0.75rem;
-  color: #868e96;
+  color: #495057;
 }
 
 .carousel {
@@ -6289,6 +6294,7 @@ button.close {
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
+  cursor: pointer;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -9314,7 +9320,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .text-body {
-  color: #868e96 !important;
+  color: #495057 !important;
 }
 
 .text-muted {
@@ -9410,6 +9416,19 @@ a.text-dark:hover, a.text-dark:focus {
   .table-bordered td {
     border: 1px solid #dee2e6 !important;
   }
+  .table-dark {
+    color: inherit;
+  }
+  .table-dark th,
+  .table-dark td,
+  .table-dark thead th,
+  .table-dark tbody + tbody {
+    border-color: #dee2e6;
+  }
+  .table .thead-dark th {
+    color: inherit;
+    border-color: #dee2e6;
+  }
 }
 
 .bg-primary {
@@ -9473,6 +9492,18 @@ a.text-dark:hover, a.text-dark:focus {
 .btn-danger {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e12b31), color-stop(60%, #C71C22), to(#b5191f));
   background-image: linear-gradient(#e12b31, #C71C22 60%, #b5191f);
+  background-repeat: no-repeat;
+}
+
+.btn-light {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(60%, #f8f9fa), to(#eceff2));
+  background-image: linear-gradient(white, #f8f9fa 60%, #eceff2);
+  background-repeat: no-repeat;
+}
+
+.btn-dark {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#464e57), color-stop(60%, #343a40), to(#2b3035));
+  background-image: linear-gradient(#464e57, #343a40 60%, #2b3035);
   background-repeat: no-repeat;
 }
 
